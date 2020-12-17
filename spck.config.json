@@ -3,7 +3,7 @@
     "type": "file",
     "task": "npm/start",
     "url":"http//:localhost:8080/",
-    "file": "index.html",
+    "file": "dist/index.html",
     "ignoreCurrent": true
   }
 }
