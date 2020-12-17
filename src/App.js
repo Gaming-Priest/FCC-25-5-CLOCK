@@ -7,15 +7,15 @@ class App extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         breakInt:5,
-         sessionInt:25,
-         timer:1500,
+         breakInt: 5,
+         sessionInt: 25,
+         timer: 1500,
          counterColor: { color: 'wheat' },
          intID: '',
          isRunning: false,
-         clockFace: 'session',
-         id: 'beep',
+         clockFace: 'session'
       }
+      
       this.startClock = this.startClock.bind(this);
       this.decrementTimer = this.decrementTimer.bind(this);
       this.clockFaceControl = this.clockFaceControl.bind(this);
@@ -53,7 +53,7 @@ class App extends Component {
          }
          if (this.state.clockFace === 'session') {
             this.switchClockFace('break', this.state.breakInt * 60)
-            this.startClock()
+           this.startClock()
          } else {
             this.switchClockFace('session', this.state.sessionInt * 60)
             this.startClock()
@@ -125,7 +125,7 @@ class App extends Component {
       if (int < 61) {
          this.setState({ counterColor: { color: '#F21515' } });
       } else {
-         this.setState({ counterColor: { color: 'wheat' } });
+   /* mark*/ this.setState({ counterColor: { color: 'wheat' } });
       }
    }
 
@@ -136,9 +136,9 @@ class App extends Component {
    };
    reset() {
       this.setState({
-         breakInt:5,
-         sessionInt:25,
-         timer:1500,
+         breakInt: 5,
+         sessionInt: 25,
+         timer: 1500,
          isRunning: false,
          clockFace: 'session',
          counterColor: { color: 'wheat' },
@@ -166,7 +166,7 @@ class App extends Component {
        clock_label={this.state.clockFace}
        />
        <audio 
-       id={this.state.id}
+       id='beep'
        src="../src/res/assets/Wecker-sound.mp3"
        ref="clockSound"
        preload="auto"

@@ -40,12 +40,12 @@
    border-radius: 20px;
    border: 1px inset;
    background-color: #2330C582;
-   width: 120px;
+   width: 200px;
    margin: 10px;
    height: 150px;
 }
 
-.break-container button ,
+.break-container button,
 .session-container button {
    background: none;
    margin: 0 7px;
@@ -66,10 +66,7 @@
    display: flex;
    align-self: center;
    justify-content: space-evenly;
-}
-
-.break-container h4{
-   margin-bottom: 15px;
+   margin: 15px;
 }
 
 .timer-container {
@@ -115,4 +112,14 @@
    100% {
       transform: rotate(360deg)
    }
+}
+
+@media screen and (max-width:750px) {
+   .session-container, 
+   .break-container {
+      width: 120px;
+   }
+   .break-container h4 {
+   margin-bottom: 15px;
+}
 }
